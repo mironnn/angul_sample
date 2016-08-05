@@ -1,0 +1,6 @@
+bash history:
+
+ 1059  cd <dir>
+ 1060  npm init
+ 1065  _ npm i -g http-server
+ 1066  http-server -p 10000
