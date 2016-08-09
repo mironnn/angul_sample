@@ -1,15 +1,24 @@
+
 {
-  "name": "angul_sample",
+  "name": "asddasd",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
+  "main": "asdasd",
   "dependencies": {
     "angular": "^1.5.8",
     "angular-ui-router": "^0.3.1"
-  }
+  },
+  "devDependencies": {
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "asdd"
+  },
+  "author": "",
+  "license": "ISC"
 }
