@@ -1,0 +1,19 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# Compiled
+*.pyc
+._*
+staller logs
+
+#Bower files
+SSP/static/bower_components
+
+# pycharm settings
+.idea/
+*.iml
+
+#gitignore
+.gitignore.*
+

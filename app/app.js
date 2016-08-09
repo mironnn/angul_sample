@@ -3,6 +3,14 @@
         .module('app', [
             'ui.router'
         ])
+        .component('ninjaComponent', {
+            template: '<input type="text" ng-model="$ctrl.greeting"/>'+
+                        '<button ng-click="$ctrl.onUpdate{{value: $ctrl.greeting}}"> Click me2</button>',
+            bindings: {
+                greeting: '<',
+                onUpdate: '&'
+            }
+        })
         .config(function ($stateProvider, $urlRouterProvider) {
             $urlRouterProvider.otherwise("/404");
 
@@ -12,7 +20,8 @@
                     controller: "appCtrl",
                     controllerAs: 'vm',
                     template: '<section>'+
-                                '<h1 ng-bind="::vm.greeting"></h1>'+
+                                '<h1 ng-bind="vm.greeting"></h1>'+
+                                '<ninja-component greeting="vm.greeting" on-update="vm.updateGreeting(value)"></ninja-component>'+
                                 '<button ng-click="vm.loadState()">Click me</button>'+
                                 '</section>'
                 })
@@ -35,10 +44,15 @@
             var vm = this
             vm.greeting = 'Hello my master'
             vm.loadState = loadState
+            vm.updateGreeting = updateGreeting;
 
             function loadState() {
                 $state.go('masterState')
             }
+            function updateGreeting(value) {
+                vm.greeting = value;
+            }
 
         })
 })();
+
