@@ -1,9 +1,13 @@
+import angular from 'angular';
+import uiRouter from 'angular-ui-router'
+
+console.log('1234');
+
 (function () {
 	'use strict';
-
 	angular
 		.module('app', [
-			'ui.router'
+			uiRouter
 		])
 		.component('ninjaComponent', {
 			template: '<input type="text" ng-model="$ctrl.greeting"/>'+

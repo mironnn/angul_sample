@@ -4,3 +4,9 @@ bash history:
  1060  npm init
  1065  _ npm i -g http-server
  1066  http-server -p 10000
+
+ _ npm install -g --save-dev babel-core babel-loader babel-preset-es2015 babel-preset-stage-0
+
+ npm start - start the server
+ webpack - build manually
+ webpack --watch - watch and apply hot changes in the code
